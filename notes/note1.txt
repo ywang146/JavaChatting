@@ -1,0 +1,2 @@
+﻿java中swing实现TextArea显示内容满时自动滚动到末尾
+https://blog.csdn.net/sinat_34811175/article/details/53141929
