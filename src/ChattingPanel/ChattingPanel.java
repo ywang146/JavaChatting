@@ -1,6 +1,9 @@
 package ChattingPanel;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -23,6 +26,14 @@ public class ChattingPanel extends JPanel{
 		typingArea.setLineWrap(true);
 		typingArea.setBorder(BorderFactory.createLoweredSoftBevelBorder());
 		this.setLayout(null);
+		sendBtn.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				if (e.isPopupTrigger() || e.getButton() == 1) {
+					typingArea.setText("");
+				}
+			}
+		});
 		add(sendBtn);
 		add(typingArea);
 	}

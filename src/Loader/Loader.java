@@ -8,7 +8,7 @@ import ChattingPanel.ChattingPanel;
 public class Loader {
 	public final static int width = 600;
 	public final static int height = 800;
-	public static void main(String[] args) {
+	public Loader() {
 		JFrame jframe = new JFrame("mainwindow");
 		jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -24,5 +24,9 @@ public class Loader {
 	
 	public static int getHeight() {
 		return height;
+	}
+	
+	public static void main(String[] args) {
+		new Loader();
 	}
 }
